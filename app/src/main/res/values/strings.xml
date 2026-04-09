@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BatteryHealthWidget</string>
+    <string name="tile_label_unrestricted">Unrestricted</string>
+    <string name="tile_label_80_percent">Limit: 80%</string>
+    <string name="tile_label_adaptive">Adaptive</string>
+    <string name="tile_permission_error">Permission needed</string>
+    <string name="instruction_title">Grant Permission Required</string>
+    <string name="instruction_body">To allow the Quick Settings tile to modify system settings, please run the following ADB command from your computer:</string>
+    <string name="instruction_footer">After running the command, you can add the \'Charge Limit\' tile to your Quick Settings panel.</string>
+</resources>
