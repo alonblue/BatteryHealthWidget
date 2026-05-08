@@ -4,7 +4,8 @@ A lightweight Android utility designed for Google Pixel devices that adds a Quic
 
 ## 🚀 Features
 - **3-State Toggle**: Cycle through modes directly from your notification shade.
-- **Dynamic Icons**: The tile icon and label change based on the active mode.
+- **Real-time Wattage Display**: When charging, the tile icon and subtitle dynamically update every 2 seconds to show the current charging wattage (W).
+- **Dynamic Icons**: The tile icon and label change based on the active mode and charging status.
 - **Native Integration**: Modifies the actual `charge_optimization_mode` and `adaptive_charging_enabled` system settings.
 
 ## 🛠️ Setup Instructions
@@ -16,9 +17,18 @@ Build and install the APK onto your Google Pixel device.
 Because modifying system battery settings is a protected action, you must manually grant the `WRITE_SECURE_SETTINGS` permission via ADB. 
 
 Connect your phone to your computer and run:
-```bash
+
+**Windows (Command Prompt):**
+```cmd
 adb shell pm grant com.example.batteryhealthwidget android.permission.WRITE_SECURE_SETTINGS
 ```
+
+**Windows (PowerShell):**
+```powershell
+& adb shell pm grant com.example.batteryhealthwidget android.permission.WRITE_SECURE_SETTINGS
+```
+
+*Note: If `adb` is not in your PATH, use the full path to `adb.exe` located in your Android SDK `platform-tools` folder.*
 
 ### 3. Add the Tile
 1. Swipe down twice to open the full Quick Settings panel.
