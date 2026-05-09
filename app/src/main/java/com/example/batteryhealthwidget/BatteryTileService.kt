@@ -113,12 +113,12 @@ class BatteryTileService : TileService() {
         val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         
-        // 1. Draw mode icon at the top (scaled to be ~25% bigger than previous 48)
+        // 1. Draw mode icon at the top
         val drawable = ContextCompat.getDrawable(this, baseIconResId)
         drawable?.let {
             it.mutate()
-            it.setTint(Color.WHITE) // System will tint this
-            val iconSize = 60 // Increased from 48 (~25% bigger)
+            it.setTint(Color.WHITE)
+            val iconSize = 56 // Slightly reduced from 60 to give text more horizontal and vertical breathing room
             val left = (size - iconSize) / 2
             val top = 0
             it.setBounds(left, top, left + iconSize, top + iconSize)
@@ -127,15 +127,16 @@ class BatteryTileService : TileService() {
         
         // 2. Draw wattage text at the bottom
         val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-            color = Color.WHITE // System will tint this
-            textSize = 38f
+            color = Color.WHITE
+            textSize = 32f // Reduced from 38f to comfortably fit double digits (e.g. "25.5W")
             typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
             textAlign = Paint.Align.CENTER
         }
         
+        val text = "${wattageText}W"
         val x = size / 2f
-        val y = size - 4f
-        canvas.drawText("${wattageText}W", x, y, paint)
+        val y = size - 6f // Moved up slightly to prevent bottom clipping
+        canvas.drawText(text, x, y, paint)
         
         return Icon.createWithBitmap(bitmap)
     }
