@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.batteryhealthwidget"
+    namespace = "io.github.alonblue.batteryhealthwidget"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.batteryhealthwidget"
+        applicationId = "io.github.alonblue.batteryhealthwidget"
         minSdk = 35
         targetSdk = 36
         versionCode = 1

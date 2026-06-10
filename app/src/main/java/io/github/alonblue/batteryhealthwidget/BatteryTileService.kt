@@ -1,4 +1,4 @@
-package com.example.batteryhealthwidget
+package io.github.alonblue.batteryhealthwidget
 
 import android.content.BroadcastReceiver
 import android.content.Context

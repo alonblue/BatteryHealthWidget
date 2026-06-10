@@ -1,6 +1,5 @@
-package com.example.batteryhealthwidget.ui.theme
+package io.github.alonblue.batteryhealthwidget.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

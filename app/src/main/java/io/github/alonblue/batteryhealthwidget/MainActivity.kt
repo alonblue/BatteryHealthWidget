@@ -1,4 +1,4 @@
-package com.example.batteryhealthwidget
+package io.github.alonblue.batteryhealthwidget
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -16,7 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.batteryhealthwidget.ui.theme.BatteryHealthWidgetTheme
+import io.github.alonblue.batteryhealthwidget.ui.theme.BatteryHealthWidgetTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
